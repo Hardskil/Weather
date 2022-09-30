@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/today.css">
+</head>
+
+<body>
+    <div class="my_weather_header">
+        <div class="my_weather_container bd-container">
+            <div class="my_weather_column">
+                <div class="my_weather_title">
+                    <a href="" class="my_weather_tittle">MY WEATHER</a>
+                </div>
+                <div class="my_weather_find">
+                    <input type="text" id="weather" name="weather" placeholder="Search city">
+                    <button type="button" id="findOutBtn">Find out the weather</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="big" id="bd_container">
+        <main class="main" id="this_day">
+            <div class="forecast_header">
+                <div class="forecast_container bd-container">
+                    <div class="tab">
+                        <button class="tablinks" onclick="openCity(event, 'London')">Today</button>
+                        <button class="tablinks" onclick="openCity(event, 'Paris')">5-day forecast</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs_body">
+                <div class="tabcontent" id="London">
+                    <section class="current_weather">
+                        <div class="current_weather_container bd-container">
+                            <div class="current_weather_data">
+                                <p class="current_weather_title_4">CURRENT WEATHER</p>
+                                <p class="current_weather_title_4" id="current_data">30.06.2018</p>
+                            </div>
+                            <div class="current_weather_column">
+                                <div class="current_weather_content_1" id="current_weather_content_1">
+                                    <div class="current_weather_title_1" id="current_1">Sunny</div>
+                                    <div class="icon_current" id="current_icon"></div>
+                                </div>
+                                <div class="current_weather_content_2">
+                                    <p class="current_weather_tittle_2" id="current_2"></p>
+                                </div>
+                                <div class="current_weather_content_3" id="current_weather_content_3">
+                                    <p class="current_title_3" id="sunrise">Sunrise:</p>
+                                    <p class="current_title_3" id="sunset">Sunset:</p>
+                                    <p class="current_title_3" id="duration">Duration:</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- <div class="big" id="big"> -->
+                    <secton class="hourly">
+                        <div class="hourly_container bd-container">
+                            <div class="hourly_column">
+                                <div class="hourly_name">
+                                    <p class="hourly_name_title">HOURLY</p>
+                                </div>
+                                <div class="hourly_content">
+                                    <div class="hourly_today">
+                                        <div class="hourly_title">Today</div>
+                                        <div class="icon"></div>
+                                        <div class="hourly_title_1">Forecast</div>
+                                        <div class="hourly_title_1">Temp</div>
+                                        <div class="hourly_title_1">ReadFeel</div>
+                                        <div class="hourly_title_1">Wind (km/h)</div>
+                                    </div>
+                                    <div class="hourly_forecast">
+                                        <div class="hourly_title_2" id="hourly_time1">19:00</div>
+                                        <div class="icon" id="icon_1"></div>
+                                        <div class="hourly_title_2" id="hourly_description_1">Sunny</div>
+                                        <div class="hourly_title_2" id="hourly_temp_1">29</div>
+                                        <div class="hourly_title_2" id="hourly_feel_1">28</div>
+                                        <div class="hourly_title_2" id="hourly_wind_1">11 ESE</div>
+                                    </div>
+                                    <div class="hourly_temp">
+                                        <div class="hourly_title_2" id="hourly_time2">20:00</div>
+                                        <div class="icon" id="icon_2"></div>
+                                        <div class="hourly_title_2" id="hourly_description_2">Sunny</div>
+                                        <div class="hourly_title_2" id="hourly_temp_2">28</div>
+                                        <div class="hourly_title_2" id="hourly_feel_2">27</div>
+                                        <div class="hourly_title_2" id="hourly_wind_2">9 ESE</div>
+                                    </div>
+                                    <div class="hourly_readfeel">
+                                        <div class="hourly_title_2" id="hourly_time3">21:00</div>
+                                        <div class="icon" id="icon_3"></div>
+                                        <div class="hourly_title_2" id="hourly_description_3">Clear</div>
+                                        <div class="hourly_title_2" id="hourly_temp_3">28</div>
+                                        <div class="hourly_title_2" id="hourly_feel_3">28</div>
+                                        <div class="hourly_title_2" id="hourly_wind_3">6 ESE</div>
+                                    </div>
+                                    <div class="hourly_wind">
+                                        <div class="hourly_title_2" id="hourly_time4">22:00</div>
+                                        <div class="icon" id="icon_4"></div>
+                                        <div class="hourly_title_2" id="hourly_description_4">Clear</div>
+                                        <div class="hourly_title_2" id="hourly_temp_4">27</div>
+                                        <div class="hourly_title_2" id="hourly_feel_4">27</div>
+                                        <div class="hourly_title_2" id="hourly_wind_4">6 ESE</div>
+                                    </div>
+                                    <div class="eleven">
+                                        <div class="hourly_title_2" id="hourly_time5">23:00</div>
+                                        <div class="icon" id="icon_5"></div>
+                                        <div class="hourly_title_2" id="hourly_description_5">Clear</div>
+                                        <div class="hourly_title_2" id="hourly_temp_5">27</div>
+                                        <div class="hourly_title_2" id="hourly_feel_5">27</div>
+                                        <div class="hourly_title_2" id="hourly_wind_5">6 ESE</div>
+                                    </div>
+                                    <div class="hourly_twelwe">
+                                        <div class="hourly_title_2" id="hourly_time6">00:00</div>
+                                        <div class="icon" id="icon_6"></div>
+                                        <div class="hourly_title_2" id="hourly_description_6">Clear</div>
+                                        <div class="hourly_title_2" id="hourly_temp_6">27</div>
+                                        <div class="hourly_title_2" id="hourly_feel_6">26</div>
+                                        <div class="hourly_title_2" id="hourly_wind_6">7 ESE</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </secton>
+                    <section class="nearby">
+                        <div class="nearby_container bd-container">
+                            <div class="nearby_title_1">
+                                <p>
+                                    NEARBY PLACES
+                                </p>
+                            </div>
+                            <div class="nearby_column">
+                                <div class="nearby_content">
+                                    <p class="nearby_title_2" id="city_1">Baladzary</p>
+                                    <div id="nearby_icon_1"></div>
+                                    <p class="naerby_title_3" id="nearby_temp_1">36</p>
+                                </div>
+                                <div class="nearby_content">
+                                    <p class="nearby_title_6" id="city_2">Bailov</p>
+                                    <div id="nearby_icon_2"></div>
+                                    <p class="nearby_title_7" id="nearby_temp_2">29</p>
+                                </div>
+                                <div class="nearby_content">
+                                    <p class="nearby_title_4" id="city_3">Badamdar</p>
+                                    <div id="nearby_icon_3"></div>
+                                    <p class="nearby_title_5" id="nearby_temp_3">36</p>
+                                </div>
+                                <div class="nearby_content">
+                                    <p class="nearby_title_8" id="city_4">Cherni gorod</p>
+                                    <div id="nearby_icon_4"></div>
+                                    <p class="nearby_title_9" id="nearby_temp_4">29</p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </section>
+                <!-- <div class="big_2" id="big_2">    -->
+                <div class="tabcontent" id="Paris">
+                    <section class="week">
+                        <div class="week_container bd-container">
+                            <div class="week_column" id="tablo">
+                                <div class="week_content" id="week_content_1">
+                                    <p class="week_title_1" id="day1">TODAY</p>
+                                    <p class="week_title_2">December</p>
+                                    <div id="week_icon_1"></div>
+                                    <p class="week_title_3" id="week_temp_1">25</p>
+                                    <p class="week_title_4" id="week_description_1">Clear,Warm</p>
+                                </div>
+                                <div class="week_content" id="week_content_2">
+                                    <p class="week_title_1" id="day2">SUN</p>
+                                    <p class="week_title_2">December</p>
+                                    <div id="week_icon_2"></div>
+                                    <p class="week_title_3" id="week_temp_2">40</p>
+                                    <p class="week_title_4" id="week_description_2">Clear,Warm</p>
+                                </div>
+                                <div class="week_content" id="week_content_3">
+                                    <p class="week_title_1" id="day3">MON</p>
+                                    <p class="week_title_2">December</p>
+                                    <div id="week_icon_3"></div>
+                                    <p class="week_title_3" id="week_temp_3">35</p>
+                                    <p class="week_title_4" id="week_description_3">Clear,Warm</p>
+                                </div>
+                                <div class="week_content" id="week_content_4">
+                                    <p class="week_title_1" id="day4">TUE</p>
+                                    <p class="week_title_2">December</p>
+                                    <div id="week_icon_4"></div>
+                                    <p class="week_title_3" id="week_temp_4">38</p>
+                                    <p class="week_title_4" id="week_description_4">Clear,Warm</p>
+                                </div>
+                                <div class="week_content" id="week_content_5">
+                                    <div class="week_title_1" id="day5">WED</div>
+                                    <div class="week_title_2">December</div>
+                                    <div id="week_icon_5"></div>
+                                    <div class="week_title_3" id="week_temp_5">36</div>
+                                    <div class="week_title_4" id="week_description_5">Clear,Warm</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <secton class="hourly">
+                        <div class="hourly_container bd-container">
+                            <div class="hourly_column">
+                                <div class="hourly_name">
+                                    <p class="hourly_name_title">HOURLY</p>
+                                </div>
+                                <div class="hourly_content">
+                                    <div class="hourly_today">
+                                        <div class="hourly_title">Today</div>
+                                        <div class="icon"></div>
+                                        <div class="hourly_title_1">Forecast</div>
+                                        <div class="hourly_title_1">Temp</div>
+                                        <div class="hourly_title_1">ReadFeel</div>
+                                        <div class="hourly_title_1">Wind (km/h)</div>
+                                    </div>
+                                    <div class="hourly_forecast">
+                                        <div class="hourly_title_2">21:00</div>
+                                        <div class="icon" id="icon_1_1"></div>
+                                        <div class="hourly_title_2" id="hourly_description_1_1">Sunny</div>
+                                        <div class="hourly_title_2" id="hourly_temp_1_1">29</div>
+                                        <div class="hourly_title_2" id="hourly_feel_1_1">28</div>
+                                        <div class="hourly_title_2">11 ESE</div>
+                                    </div>
+                                    <div class="hourly_temp">
+                                        <div class="hourly_title_2">22:00</div>
+                                        <div class="icon" id="icon_2_2"></div>
+                                        <div class="hourly_title_2" id="hourly_description_2_2">Sunny</div>
+                                        <div class="hourly_title_2" id="hourly_temp_2_2">28</div>
+                                        <div class="hourly_title_2" id="hourly_feel_2_2">27</div>
+                                        <div class="hourly_title_2">9 ESE</div>
+                                    </div>
+                                    <div class="hourly_readfeel">
+                                        <div class="hourly_title_2">23:00</div>
+                                        <div class="icon" id="icon_3_3"></div>
+                                        <div class="hourly_title_2" id="hourly_description_3_3">Clear</div>
+                                        <div class="hourly_title_2" id="hourly_temp_3_3">28</div>
+                                        <div class="hourly_title_2" id="hourly_feel_3_3">28</div>
+                                        <div class="hourly_title_2">6 ESE</div>
+                                    </div>
+                                    <div class="hourly_wind">
+                                        <div class="hourly_title_2">00:00</div>
+                                        <div class="icon" id="icon_4_4"></div>
+                                        <div class="hourly_title_2" id="hourly_description_4_4">Clear</div>
+                                        <div class="hourly_title_2" id="hourly_temp_4_4">27</div>
+                                        <div class="hourly_title_2" id="hourly_feel_4_4">27</div>
+                                        <div class="hourly_title_2">6 ESE</div>
+                                    </div>
+                                    <div class="eleven">
+                                        <div class="hourly_title_2">01:00</div>
+                                        <div class="icon" id="icon_5_5"></div>
+                                        <div class="hourly_title_2" id="hourly_description_5_5">Clear</div>
+                                        <div class="hourly_title_2" id="hourly_temp_5_5">27</div>
+                                        <div class="hourly_title_2" id="hourly_feel_5_5">27</div>
+                                        <div class="hourly_title_2">6 ESE</div>
+                                    </div>
+                                    <div class="hourly_twelwe">
+                                        <div class="hourly_title_2">02:00</div>
+                                        <div class="icon" id="icon_6_6"></div>
+                                        <div class="hourly_title_2" id="hourly_description_6_6">Clear</div>
+                                        <div class="hourly_title_2" id="hourly_temp_6_6">27</div>
+                                        <div class="hourly_title_2" id="hourly_feel_6_6">26</div>
+                                        <div class="hourly_title_2">7 ESE</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </secton>
+                </div>
+            </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="error" id="error">
+        <p class="error_title">404</p>
+        <p class="error_title">Please enter a different location</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
