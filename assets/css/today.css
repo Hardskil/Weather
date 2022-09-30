@@ -1,0 +1,204 @@
+*,::before,::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    height: 100%;
+    background-color: #D7D7D7;
+    font-family: sans-serif;
+}
+.bd-container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+/* *************** MY WEATHER **********************/
+
+.my_weather_header{
+    background-color: #f6f6f6;
+}
+.my_weather_column{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    color: #009595;
+}
+/********************** forecast  *******************/
+.tablinks{
+    background-color: #404040;
+    color: white;
+    padding: 15px;
+}
+.forecast_header{
+    background-color: #404040;
+}
+
+/************************* current **************************/
+.current_weather_container{
+    margin-top: 40px;
+    padding: 6rem;
+    background-color: #F6F6F6;
+}
+.current_weather_column{
+    display: flex;
+    justify-content: space-between;
+}
+.current_weather_content_1{
+    font-size: 25px;    
+    color: #A05E5E;
+}
+.current_weather_content_2{
+    font-size: 45px;
+}
+.current_title_3{
+    margin-top: 10px;
+}
+.current_weather_data{
+    display: flex;
+    justify-content: space-between;
+}
+.current_weather_title_4{
+    margin-bottom: 5rem;
+    font-size: 20px;
+    font-weight: 700;
+    color: #009595;
+}
+.current_weather_content_1{
+    display: flex;
+    column-gap: 15px;
+}
+#current_1{
+    font-size: 39px;
+    margin-top: 29px;
+}
+/******************************* hourly ***************************************/
+.hourly_container{
+    margin-top: 60px;
+    background-color: #e6dada;
+    padding: 8rem;
+}
+.hourly_content{
+    display: flex;
+    column-gap: 3rem;
+}
+.hourly_title, .hourly_title_1, .hourly_title_2{
+    margin-top: 25px;
+    font-size: 18px;
+}
+.hourly_title_1, .hourly_title{
+    color: #A05E5E;
+}
+.hourly_title{
+    font-weight: 600;
+}
+.hourly_name_title{
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #009595;
+}
+.icon{
+    width: 100px;
+    height: 100px;
+    background-position: 0,0;
+    background-repeat: no-repeat;
+}
+
+
+/***************************** nearby  *******************************/
+.nearby_container{
+    background-color: #F6F6F6;
+    margin-top: 50px;
+    padding: 6rem;   
+}
+.nearby_column{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-gap: 20px;
+}
+.nearby_content{
+    border: 2px;
+    background-color: #EDEDED;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 12px;
+    font-weight: 400;
+    font-size: 19px;
+    transition: background-color .6s linear;
+}
+.nearby_content:hover{
+    background-color: #b6a6a6;
+}
+.nearby_title_1{
+    color: #009595;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/************************************** main 2******************************* */
+/************************************* week **************************************/
+
+.week_content{
+    margin-top: 25px;
+    border: 2px;
+    background-color: #F6F6F6;
+    padding: 4rem;
+    transition: background-color 1s linear;
+}
+.week_content:hover{
+    background-color: #b6a6a6;
+    transform: scale(1.075);
+}
+.week_column{
+    display: grid;
+    grid-template-columns: repeat(5,19%);
+    grid-gap: 15px;
+}
+.week_title_1, .week_title_2, .week_title_3, .week_title_4{
+    text-align: left;
+    margin-top: 45px;
+}
+.week_title_1{
+    font-size: 20px;
+    color: #009595;
+    font-weight: 500;
+    text-align: center;
+}
+.week_title_2{
+    color: #5E5E5E;
+    font-weight: 400;
+    text-align: center;
+}
+.week_title_3{
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+}
+.week_title_4{
+    color: #9C5E5E;           
+    text-align: center;
+}
+
+.error{
+    padding: 8rem;
+    background-color: #eee;
+    text-align: center;
+    width: 1034px;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: none;
+}
+.error_title{
+    font-size: 45px;
+}
+#Paris{
+    display: none;
+}
